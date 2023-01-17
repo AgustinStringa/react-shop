@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "../ui/button/Button";
 import InputForm from "../ui/input-form/InputForm";
-// import Logo from "../Logo/Logo";
+import Logo from "../Logo/Logo";
 const SignUp = () => {
   return (
     <div>
-      {/* <Logo /> */}
+      <Logo />
       <h1 class="main-title">Create a new password</h1>
       <p class="subtitle">Enter a new password for your account</p>
 
