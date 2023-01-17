@@ -3,10 +3,9 @@ import "./InputForm.css";
 const InputForm = ({ type = "text", placeholder = "*****" }) => {
   return (
     <input
-      class="input-form"
+      className="input-form"
       type={type}
       name=""
-      id=""
       placeholder={placeholder}
     />
   );

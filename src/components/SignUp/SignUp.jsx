@@ -7,16 +7,16 @@ const SignUp = () => {
   return (
     <div>
       <Logo height="50px" />
-      <h1 class="main-title">Create a new password</h1>
-      <p class="subtitle">Enter a new password for your account</p>
+      <h1 className="main-title">Create a new password</h1>
+      <p className="subtitle">Enter a new password for your account</p>
 
-      <form action="" class="sign-up-form">
-        <div class="input-field">
-          <label for="password">Password</label>
+      <form action="" className="sign-up-form">
+        <div className="input-field">
+          <label htmlFor="password">Password</label>
           <InputForm type="password" placeholder="*********" />
         </div>
-        <div class="input-field">
-          <label for="repeat-password">Re-enter password</label>
+        <div className="input-field">
+          <label htmlFor="repeat-password">Re-enter password</label>
           <InputForm type="password" placeholder="*********" />
         </div>
         <Button text="Confirm" />

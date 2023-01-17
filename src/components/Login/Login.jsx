@@ -6,19 +6,19 @@ const Login = () => {
   return (
     <div>
       <Logo height="50px" />
-      <form action="" class="sign-up-form">
-        <div class="input-field">
-          <label for="password">Email address</label>
+      <form action="" className="sign-up-form">
+        <div className="input-field">
+          <label htmlFor="password">Email address</label>
           <InputForm type="email" placeholder="camilayokoo@gmail.com" />
         </div>
-        <div class="input-field">
-          <label for="password">Password</label>
+        <div className="input-field">
+          <label htmlFor="password">Password</label>
           <InputForm type="password" placeholder="*********" />
         </div>
         <Button text="Log In" />
 
-        <p class="forgot-message">
-          <a href="/" class="form-link forgot-link">
+        <p className="forgot-message">
+          <a href="/" className="form-link forgot-link">
             Forgot my password
           </a>
         </p>
