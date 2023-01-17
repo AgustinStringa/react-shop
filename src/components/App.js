@@ -2,11 +2,13 @@ import React from 'react'
 import './reset.css'
 import './App.scss'
 import SignUp from './SignUp/SignUp'
+import Login from './Login/Login'
 const App = () => {
     return (
         <>
             <div className='container'>
-                <SignUp />
+                {/* <SignUp /> */}
+                <Login />
             </div>
         </>
     )

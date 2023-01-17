@@ -6,20 +6,25 @@ const Login = () => {
   return (
     <div>
       <Logo height="50px" />
-      <h1 class="main-title">Create a new password</h1>
-      <p class="subtitle">Enter a new password for your account</p>
-
       <form action="" class="sign-up-form">
+        <div class="input-field">
+          <label for="password">Email address</label>
+          <InputForm type="email" placeholder="camilayokoo@gmail.com" />
+        </div>
         <div class="input-field">
           <label for="password">Password</label>
           <InputForm type="password" placeholder="*********" />
         </div>
-        <div class="input-field">
-          <label for="repeat-password">Re-enter password</label>
-          <InputForm type="password" placeholder="*********" />
-        </div>
-        <Button text="Confirm" />
+        <Button text="Log In" />
+
+        <p class="forgot-message">
+          <a href="/" class="form-link forgot-link">
+            Forgot my password
+          </a>
+        </p>
       </form>
+
+      <Button text={"Sign up"} outline={true}></Button>
     </div>
   );
 };

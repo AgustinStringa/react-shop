@@ -1,8 +1,11 @@
 import React from "react";
 import "./Button.scss";
-const Button = ({ text, outline = false }) => {
+const Button = ({ text, outline = false, children }) => {
   return (
-    <button className={`button ${outline && "button-outline"}`}>{text}</button>
+    <button className={`button ${outline && "button-outline"}`}>
+      {text}
+      {children}
+    </button>
   );
 };
 
