@@ -19,11 +19,12 @@ body {
 .container {
   margin: 0 auto;
   width: var(--width-mobile);
+  padding: 4rem 0;
 }
 
 .main-title {
   margin: 1rem 0;
-  font-size: var(--font-md);
+  font-size: var(--font-bg);
   text-align: center;
 }
 .subtitle {

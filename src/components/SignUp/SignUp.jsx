@@ -5,7 +5,7 @@ import Logo from "../Logo/Logo";
 const SignUp = () => {
   return (
     <div>
-      <Logo />
+      <Logo height="50px" />
       <h1 class="main-title">Create a new password</h1>
       <p class="subtitle">Enter a new password for your account</p>
 
