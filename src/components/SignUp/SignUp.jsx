@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../ui/button/Button";
 import InputForm from "../ui/input-form/InputForm";
 import Logo from "../Logo/Logo";
+import "./SignUp.css";
 const SignUp = () => {
   return (
     <div>

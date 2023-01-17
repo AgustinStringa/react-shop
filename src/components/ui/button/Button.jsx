@@ -1,7 +1,9 @@
 import React from "react";
-import "./Button.css";
+import "./Button.scss";
 const Button = ({ text, outline = false }) => {
-  return <button className={`${outline && "button-outline"}`}>{text}</button>;
+  return (
+    <button className={`button ${outline && "button-outline"}`}>{text}</button>
+  );
 };
 
 export default Button;

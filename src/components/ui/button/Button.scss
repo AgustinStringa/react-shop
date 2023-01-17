@@ -1,4 +1,4 @@
-button {
+.button {
   background-color: var(--hospital-green);
   border: 1px solid #acd9b2;
   border-radius: 10px;
@@ -10,6 +10,11 @@ button {
   font-family: "Quicksand";
   font-weight: 700;
   cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--hospital-green-dark);
+  }
 }
 
 .button-outline {
