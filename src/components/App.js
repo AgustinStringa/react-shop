@@ -1,9 +1,13 @@
 import React from 'react'
-
+import './reset.css'
+import './App.scss'
+import SignUp from './SignUp/SignUp'
 const App = () => {
     return (
         <>
-            <h1>hello world</h1>
+            <div className='container'>
+                <SignUp />
+            </div>
         </>
     )
 }
