@@ -1,8 +1,9 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client';
-import App from './components/App'
+import Home from './components/Home'
 import SignUp from './components/Pages/SignUp/SignUp'
 import Login from './components/Pages/Login/Login'
+import NotFound from './components/Pages/404/NotFound';
 import {
     createBrowserRouter,
     RouterProvider,
@@ -11,7 +12,7 @@ const router = createBrowserRouter(
     [
         {
             path: "/",
-            element: <App />,
+            element: <Home />,
         },
         {
             path: "/signup",
@@ -21,6 +22,10 @@ const router = createBrowserRouter(
             path: "/login",
             element: <Login />,
         },
+        {
+            path: "*",
+            element: <NotFound />
+        }
     ]);
 const root = createRoot(document.getElementById('root'));
 root.render(<React.StrictMode>
