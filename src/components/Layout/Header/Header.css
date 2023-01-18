@@ -1,0 +1,26 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.desktop-nav {
+  display: none;
+}
+.header-logo {
+  order: 2;
+}
+.menu-cart {
+  order: 3;
+}
+@media (min-width: 768px) {
+  .header-logo {
+    order: 1;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .desktop-nav {
+    display: block;
+    order: 2;
+  }
+}
