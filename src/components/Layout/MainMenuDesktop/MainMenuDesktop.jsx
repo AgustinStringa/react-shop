@@ -5,9 +5,9 @@ import "./MainMenuDesktop.css";
 const MainMenuDesktop = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   return (
-    <div class="desktop-main-menu">
+    <div className="desktop-main-menu">
       <button
-        class=""
+        className=""
         onClick={() => {
           setShowDropdown(!showDropdown);
         }}
@@ -17,18 +17,20 @@ const MainMenuDesktop = () => {
       {showDropdown && (
         <ul>
           <li>
-            <Link to="/orders" class="desktop-main-menu__item">
+            <Link to="/orders" className="desktop-main-menu__item">
               My orders
             </Link>
           </li>
           <li>
-            <Link to="/account" class="desktop-main-menu__item">
+            <Link to="/account" className="desktop-main-menu__item">
               My account
             </Link>
           </li>
           <hr />
           <li>
-            <button class="desktop-main-menu__item--logout">Sign out</button>
+            <button className="desktop-main-menu__item--logout">
+              Sign out
+            </button>
           </li>
         </ul>
       )}
