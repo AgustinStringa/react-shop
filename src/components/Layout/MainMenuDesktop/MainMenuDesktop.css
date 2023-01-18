@@ -1,0 +1,65 @@
+.desktop-main-menu > button {
+  background: transparent;
+  color: var(--dark);
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-size: var(--font-md);
+  gap: 1rem;
+}
+
+.desktop-main-menu > button img {
+  transform: rotate(90deg);
+}
+.desktop-main-menu ul {
+  padding: 0;
+  text-align: end;
+  /* border: 1px solid rgb(205, 205, 205); */
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px rgb(205, 205, 205);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  width: 150px;
+  height: auto;
+  z-index: 3;
+}
+
+.desktop-main-menu ul {
+  /* display: none; */
+  position: absolute;
+  right: 0;
+}
+
+.desktop-main-menu li {
+  padding: 12px;
+}
+.desktop-main-menu li:last-child {
+  padding: 18px 20px 20px 20px;
+}
+
+.desktop-main-menu__item {
+  font-weight: 700;
+  color: var(--dark);
+}
+.desktop-main-menu__item--logout {
+  color: var(--hospital-green-dark);
+  font-size: var(--sm);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.desktop-main-menu {
+  display: none;
+  position: relative;
+}
+.desktop-main-menu ul hr {
+  border-top: var(--very-light-pink);
+}
+@media (min-width: 768px) {
+  .desktop-main-menu {
+    display: block;
+    text-align: end;
+    padding-right: 16px;
+  }
+}
