@@ -8,7 +8,6 @@ const Login = () => {
   return (
     <Layout>
       <div>
-        <Logo height="50px" />
         <form action="" className="sign-up-form">
           <div className="input-field">
             <label htmlFor="password">Email address</label>

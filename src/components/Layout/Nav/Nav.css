@@ -20,7 +20,7 @@
   overflow: scroll;
   width: 100%;
   background-color: var(--hospital-green);
-  padding-left: 30px;
+  padding: 0 2rem;
 }
 .mobile-nav > div header {
   display: flex;

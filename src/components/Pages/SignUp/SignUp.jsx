@@ -10,7 +10,6 @@ const SignUp = () => {
   return (
     <Layout>
       <div>
-        <Logo height="50px" />
         <h1 className="main-title">Create a new password</h1>
         <p className="subtitle">Enter a new password for your account</p>
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import IcoMenu from "../../../assets/icons/icon_menu.png";
-import IcoClose from "../../../assets/icons/icon_close.png";
+import IcoClose from "../../../assets/icons/icon_close_dark.png";
 import LinkHeader from "../LinksHeader/LinkHeader";
 import { Link } from "react-router-dom";
 import "./Nav.css";

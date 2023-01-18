@@ -1,15 +1,18 @@
 import React from "react";
 import logo from "../../assets/images/logo_yard_sale.svg";
 import "./Logo.css";
+import { Link } from "react-router-dom";
 const Logo = ({ width = "auto", height = "auto", classes = [] }) => {
   return (
-    <img
-      src={logo}
-      alt=""
-      width={width}
-      height={height}
-      className={`logo ${classes.map((el) => `${el}`)}`}
-    />
+    <Link to={"/"}>
+      <img
+        src={logo}
+        alt=""
+        width={width}
+        height={height}
+        className={`logo ${classes.map((el) => `${el}`)}`}
+      />
+    </Link>
   );
 };
 
