@@ -50,35 +50,35 @@ const Nav = () => {
             <nav className="category-list-mobile">
               <ul className="">
                 <li className="category-item-mobile">
-                  <a>All</a>
+                  <Link to={""}>All</Link>
                 </li>
                 <li className="category-item-mobile">
-                  <a>Clothes</a>
+                  <Link to={""}>Clothes</Link>
                 </li>
                 <li className="category-item-mobile">
-                  <a>Electronics</a>
+                  <Link to={""}>Electronics</Link>
                 </li>
                 <li className="category-item-mobile">
-                  <a>Furnitures</a>
+                  <Link to={""}>Furnitures</Link>
                 </li>
                 <li className="category-item-mobile">
-                  <a>Toys</a>
+                  <Link to={""}>Toys</Link>
                 </li>
                 <li className="category-item-mobile">
-                  <a>Others</a>
+                  <Link to={""}>Others</Link>
                 </li>
                 <hr />
                 <li className="category-item-mobile">
-                  <a>My orders</a>
+                  <Link to={"/orders"}>My orders</Link>
                 </li>
                 <li className="category-item-mobile">
-                  <a>My account</a>
+                  <Link to={"/account"}>My account</Link>
                 </li>
               </ul>
             </nav>
             <footer>
               <p>camilayokoo@gmail.com</p>
-              <a href="/">Sign out</a>
+              <button>Sign out</button>
             </footer>
           </div>
         )}

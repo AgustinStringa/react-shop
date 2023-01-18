@@ -13,12 +13,13 @@
 }
 
 .mobile-nav > div {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
+  overflow: scroll;
   width: 100%;
-  background-color: aquamarine;
+  background-color: var(--hospital-green);
   padding-left: 30px;
 }
 .mobile-nav > div header {
@@ -34,9 +35,14 @@
 }
 .mobile-nav > div header h2 {
   font-size: var(--font-md);
+  margin: 2rem 0;
 }
-.mobile-nav > div footer a {
+.mobile-nav > div footer button {
   color: var(--hospital-green);
+  background-color: transparent;
+  border: none;
+  color: var(--gray);
+  padding: 1rem 0;
 }
 
 .desktop-nav {
@@ -68,4 +74,8 @@
   .desktop-nav {
     display: block;
   }
+}
+.category-item-mobile {
+  padding: 16px 0;
+  font-weight: 700;
 }
