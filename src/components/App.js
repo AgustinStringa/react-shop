@@ -1,15 +1,13 @@
 import React from 'react'
 import './reset.css'
 import './App.scss'
-import SignUp from './SignUp/SignUp'
-import Login from './Login/Login'
+
+
 const App = () => {
     return (
         <>
-            <div className='container'>
-                {/* <SignUp /> */}
-                <Login />
-            </div>
+            <h1>tenes que modificar el componente app</h1>
+            <h2>ponele Home</h2>
         </>
     )
 }
