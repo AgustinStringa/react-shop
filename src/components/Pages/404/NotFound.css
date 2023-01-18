@@ -7,6 +7,6 @@
   justify-content: center;
 }
 
-h2 {
+.notfoundmessage {
   color: var(--hospital-green-dark);
 }
