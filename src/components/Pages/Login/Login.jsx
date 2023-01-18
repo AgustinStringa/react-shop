@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "../ui/button/Button";
-import InputForm from "../ui/input-form/InputForm";
-import Logo from "../Logo/Logo";
-import Layout from "../Layout/Layout";
-import "../App.scss";
+import Button from "../../ui/button/Button";
+import InputForm from "../../ui/input-form/InputForm";
+import Logo from "../../Logo/Logo";
+import Layout from "../../Layout/Layout";
+import "../../App.scss";
 const Login = () => {
   return (
     <Layout>

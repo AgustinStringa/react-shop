@@ -1,8 +1,8 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client';
 import App from './components/App'
-import SignUp from './components/SignUp/SignUp'
-import Login from './components/Login/Login'
+import SignUp from './components/Pages/SignUp/SignUp'
+import Login from './components/Pages/Login/Login'
 import {
     createBrowserRouter,
     RouterProvider,
