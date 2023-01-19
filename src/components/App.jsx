@@ -6,6 +6,7 @@ import Login from "../pages/Login/Login";
 import PasswordRecovery from "../pages/PasswordRecovery/PasswordRecovery";
 import NotFound from "../pages/404/NotFound";
 import Home from "../pages/Home/Home";
+import Account from "../pages/Account/Account";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/password-recovery",
     element: <PasswordRecovery />,
+  },
+  {
+    path: "/account",
+    element: <Account />,
   },
   {
     path: "*",

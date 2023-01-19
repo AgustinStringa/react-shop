@@ -3,6 +3,7 @@ import Prod1 from "../../assets/images/prod_fridge.png";
 import IcoAddCart from "../../assets/icons/bt_add_to_cart.svg";
 import IcoAddedCart from "../../assets/icons/bt_added_to_cart.svg";
 const ProductItem = () => {
+  //TODO, PRODUCT DETAIL MIGHT BE A RENDER PROP, ONDETAL={()=>{}}
   return (
     <div className="product-card">
       <img src={Prod1} alt="" className="product-card__image" />
