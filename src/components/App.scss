@@ -40,7 +40,8 @@ ul {
 }
 .container-signup,
 .container-login,
-.container-password-recovery {
+.container-password-recovery,
+.account-container {
   max-width: 375px;
   margin: 2rem auto;
   height: 100vh;
@@ -61,7 +62,8 @@ ul {
 }
 
 .sign-up-form label,
-.recovery-form label {
+.recovery-form label,
+.create-account-form label {
   margin-bottom: 0.5rem;
   font-size: var(--font-sm);
   font-weight: 700;
