@@ -2,7 +2,9 @@ import React from "react";
 import Button from "../../ui/button/Button";
 import InputForm from "../../ui/input-form/InputForm";
 import "../../App.scss";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <div className="container-login">
       <h1 className="main-title">Login</h1>
@@ -24,7 +26,13 @@ const Login = () => {
         </p>
       </form>
 
-      <Button text={"Sign up"} outline={true}></Button>
+      <Button
+        text={"Sign up"}
+        outline={true}
+        onClick={() => {
+          navigate("/signup");
+        }}
+      ></Button>
     </div>
   );
 };
