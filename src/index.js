@@ -1,7 +1,7 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client';
 import Home from './components/Home'
-import SignUp from './components/Pages/SignUp/SignUp'
+import NewPassword from './components/Pages/NewPassword/NewPassword'
 import Login from './components/Pages/Login/Login'
 import NotFound from './components/Pages/404/NotFound';
 import PasswordRecovery from './components/Pages/PasswordRecovery/PasswordRecovery';
@@ -17,7 +17,7 @@ const router = createBrowserRouter(
         },
         {
             path: "/signup",
-            element: <SignUp />,
+            element: <NewPassword />,
         },
         {
             path: "/login",

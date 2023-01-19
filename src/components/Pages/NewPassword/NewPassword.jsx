@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "../../ui/button/Button";
 import InputForm from "../../ui/input-form/InputForm";
-import "./SignUp.css";
+import "./NewPassword.css";
 import "../../App.scss";
 import Logo from "../../Logo/Logo";
 
-const SignUp = () => {
+const NewPassword = () => {
   return (
     <>
       <div className="container-signup">
@@ -29,4 +29,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default NewPassword;
