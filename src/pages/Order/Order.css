@@ -1,0 +1,41 @@
+.resume {
+  border-radius: 8px;
+  background-color: var(--text-input-field);
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px auto;
+}
+.resume p {
+  margin: 0;
+}
+.resume .date {
+  font-weight: 700;
+  margin-bottom: 4px;
+  font-size: var(--font-bg);
+}
+
+.resume .count-articles,
+.order-item .product-name {
+  font-size: var(--font-md);
+  color: var(--very-light-pink);
+}
+.resume .final-price,
+.order-item .product-price {
+  font-weight: 700;
+  font-family: "Roboto";
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+.order-item figure {
+  margin: 0;
+}
+.order-item img {
+  border-radius: 16px;
+}
