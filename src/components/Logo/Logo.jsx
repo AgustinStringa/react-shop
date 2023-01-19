@@ -4,7 +4,7 @@ import "./Logo.css";
 import { Link } from "react-router-dom";
 const Logo = ({ width = "auto", height = "auto", classes = [] }) => {
   return (
-    <Link to={"/"}>
+    <Link to={"/"} className="logo-container">
       <img
         src={logo}
         alt=""

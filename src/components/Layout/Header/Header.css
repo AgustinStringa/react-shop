@@ -6,14 +6,14 @@
 .desktop-nav {
   display: none;
 }
-.header-logo {
+.logo-container {
   order: 2;
 }
 .menu-cart {
   order: 3;
 }
 @media (min-width: 768px) {
-  .header-logo {
+  .logo-container {
     order: 1;
   }
   .mobile-nav {
