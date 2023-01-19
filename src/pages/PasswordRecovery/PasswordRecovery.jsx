@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Logo from "../../Logo/Logo";
-import Button from "../../ui/button/Button";
-import InputForm from "../../ui/input-form/InputForm";
+import Logo from "../../components/Logo/Logo";
+import Button from "../../components/ui/button/Button";
+import InputForm from "../../components/ui/input-form/InputForm";
 import { Link } from "react-router-dom";
-import ImgEmail from "../../../assets/images/email.svg";
+import ImgEmail from "../../assets/images/email.svg";
 import "./PasswordRecovery.css";
 const PasswordRecovery = () => {
   const [emailSent, setEmailSent] = useState(false);
