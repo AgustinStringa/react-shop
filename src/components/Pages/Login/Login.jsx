@@ -3,10 +3,13 @@ import Button from "../../ui/button/Button";
 import InputForm from "../../ui/input-form/InputForm";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Logo from "../../Logo/Logo";
 const Login = () => {
   const navigate = useNavigate();
   return (
     <div className="container-login">
+      <Logo height="50px" classes={["logo-mobile"]} />
       <h1 className="main-title">Login</h1>
       <form action="" className="sign-up-form">
         <div className="input-field">
@@ -20,9 +23,9 @@ const Login = () => {
         <Button text="Log In" />
 
         <p className="forgot-message">
-          <a href="/" className="form-link forgot-link">
+          <Link to="/password-recovery" className="form-link forgot-link">
             Forgot my password
-          </a>
+          </Link>
         </p>
       </form>
 

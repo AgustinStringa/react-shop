@@ -4,3 +4,11 @@
   flex-basis: 120px;
   flex-shrink: 0;
 }
+.logo-container img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.logo-mobile {
+  /* margin-top: 2rem; */
+  margin-bottom: 3rem;
+}

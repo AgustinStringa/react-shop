@@ -4,6 +4,7 @@ import Home from './components/Home'
 import SignUp from './components/Pages/SignUp/SignUp'
 import Login from './components/Pages/Login/Login'
 import NotFound from './components/Pages/404/NotFound';
+import PasswordRecovery from './components/Pages/PasswordRecovery/PasswordRecovery';
 import {
     createBrowserRouter,
     RouterProvider,
@@ -21,6 +22,10 @@ const router = createBrowserRouter(
         {
             path: "/login",
             element: <Login />,
+        },
+        {
+            path: "/password-recovery",
+            element: <PasswordRecovery />,
         },
         {
             path: "*",
