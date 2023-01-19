@@ -38,7 +38,12 @@ ul {
     padding: 2rem 0;
   }
 }
-
+.container-signup,
+.container-login {
+  max-width: 375px;
+  margin: 6rem auto;
+  height: 100vh;
+}
 .main-title {
   margin: 1rem 0;
   font-size: var(--font-bg);
