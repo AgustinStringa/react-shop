@@ -3,7 +3,7 @@ import "./InputForm.css";
 const InputForm = ({
   type = "text",
   placeholder = "*****",
-  id = "",
+  id = null,
   disabled = false,
 }) => {
   return (

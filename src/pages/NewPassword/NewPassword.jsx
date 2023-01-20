@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "../../components/ui/button/Button";
-import InputForm from "../../components/ui/input-form/InputForm";
+import Button from "Components/ui/button/Button";
+import InputForm from "Components/ui/input-form/InputForm";
 import "./NewPassword.css";
-import "../../components/App.scss";
-import Logo from "../../components/Logo/Logo";
+import "Components/App.scss";
+import Logo from "Components/Logo/Logo";
 
 const NewPassword = () => {
   return (

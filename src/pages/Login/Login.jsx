@@ -1,10 +1,10 @@
 import React from "react";
-import Button from "../../components/ui/button/Button";
-import InputForm from "../../components/ui/input-form/InputForm";
-import "../../components/App.scss";
+import Button from "Components/ui/button/Button";
+import InputForm from "Components/ui/input-form/InputForm";
+import "Components/App.scss";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Logo from "../../components/Logo/Logo";
+import Logo from "Components/Logo/Logo";
 const Login = () => {
   const navigate = useNavigate();
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import ProductItem from "../components/OrderItem/OrderItem";
+import ProductItem from "Components/ProductItem/ProductItem";
 const ProductList = () => {
   return (
     <>

@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../../components/Layout/Layout";
-import ProductList from "../../containers/ProductList";
+import Layout from "Components/Layout/Layout";
+import ProductList from "Containers/ProductList";
 import "./Home.css";
 const Home = () => {
   return (

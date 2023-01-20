@@ -1,6 +1,6 @@
 import React from "react";
 import ImgProd from "../../assets/images/prod_round_shelf.png";
-const ProductItem = () => {
+const OrderItem = () => {
   return (
     <div className="order-item">
       <figure>
@@ -16,4 +16,4 @@ const ProductItem = () => {
   );
 };
 
-export default ProductItem;
+export default OrderItem;
