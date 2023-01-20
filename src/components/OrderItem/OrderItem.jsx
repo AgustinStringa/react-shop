@@ -1,5 +1,5 @@
 import React from "react";
-import ImgProd from "../../assets/images/prod_round_shelf.png";
+import ImgProd from "Images/prod_round_shelf.png";
 const OrderItem = () => {
   return (
     <div className="order-item">

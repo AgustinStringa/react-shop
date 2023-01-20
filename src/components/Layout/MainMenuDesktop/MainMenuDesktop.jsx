@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import IcoDropdown from "../../../assets/icons/dropdown.svg";
+import IcoDropdown from "Icons/dropdown.svg";
 import { Link } from "react-router-dom";
 import "./MainMenuDesktop.css";
 const MainMenuDesktop = () => {

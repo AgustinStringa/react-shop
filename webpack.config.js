@@ -17,6 +17,7 @@ module.exports = {
             Pages: path.resolve(__dirname, 'src/pages/'),
             Icons: path.resolve(__dirname, 'src/assets/icons/'),
             Images: path.resolve(__dirname, 'src/assets/images'),
+            Layout: path.resolve(__dirname, 'src/components/Layout'),
         }
     },
     mode: 'development',

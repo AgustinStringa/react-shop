@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import IcoClose from "../../../assets/icons/icon_close_dark.png";
+import IcoClose from "Icons/icon_close_dark.png";
 const MobileMenu = ({ setShowMobileMenu }) => {
   return (
     <div>

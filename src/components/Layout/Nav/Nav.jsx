@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import IcoMenu from "../../../assets/icons/icon_menu.png";
-import LinkHeader from "../LinksHeader/LinkHeader";
+import IcoMenu from "Icons/icon_menu.png";
+import LinkHeader from "Layout/LinksHeader/LinkHeader";
 import "./Nav.css";
 const Nav = ({ MobileMenu }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);

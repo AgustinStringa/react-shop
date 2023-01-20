@@ -1,7 +1,7 @@
 import React from "react";
-import Prod1 from "../../assets/images/prod_fridge.png";
-import IcoAddCart from "../../assets/icons/bt_add_to_cart.svg";
-import IcoAddedCart from "../../assets/icons/bt_added_to_cart.svg";
+import Prod1 from "Images/prod_fridge.png";
+import IcoAddCart from "Icons/bt_add_to_cart.svg";
+import IcoAddedCart from "Icons/bt_added_to_cart.svg";
 const ProductItem = () => {
   //TODO, PRODUCT DETAIL MIGHT BE A RENDER PROP, ONDETAL={()=>{}}
   return (

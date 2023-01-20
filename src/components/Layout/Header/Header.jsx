@@ -1,9 +1,9 @@
 import React from "react";
-import Logo from "../../Logo/Logo";
-import Nav from "../Nav/Nav";
-import Cart from "../Cart/Cart";
+import Logo from "Components/Logo/Logo";
+import Nav from "Layout/Nav/Nav";
+import Cart from "Layout/Cart/Cart";
 import "./Header.css";
-import MobileMenu from "../MobileMenu/MobileMenu";
+import MobileMenu from "Layout/MobileMenu/MobileMenu";
 const Header = () => {
   return (
     <div className="header-box">
