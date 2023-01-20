@@ -10,7 +10,14 @@ module.exports = {
         filename: 'bundle.js',
     },
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx'],
+        alias: {
+            Components: path.resolve(__dirname, 'src/components/'),
+            Containers: path.resolve(__dirname, 'src/containers/'),
+            Pages: path.resolve(__dirname, 'src/pages/'),
+            Icons: path.resolve(__dirname, 'src/assets/icons/'),
+            Images: path.resolve(__dirname, 'src/assets/images'),
+        }
     },
     mode: 'development',
     module: {

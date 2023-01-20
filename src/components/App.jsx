@@ -1,13 +1,13 @@
 import React from "react";
 import "./reset.css";
 import "./App.scss";
-import NewPassword from "../pages/NewPassword/NewPassword";
-import Login from "../pages/Login/Login";
-import PasswordRecovery from "../pages/PasswordRecovery/PasswordRecovery";
-import NotFound from "../pages/404/NotFound";
-import Home from "../pages/Home/Home";
-import Account from "../pages/Account/Account";
-import Order from "../pages/Order/Order";
+import NewPassword from "Pages/NewPassword/NewPassword";
+import Login from "Pages/Login/Login";
+import PasswordRecovery from "Pages/PasswordRecovery/PasswordRecovery";
+import NotFound from "Pages/404/NotFound";
+import Home from "Pages/Home/Home";
+import Account from "Pages/Account/Account";
+import Order from "Pages/Order/Order";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
