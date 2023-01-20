@@ -1,16 +1,17 @@
 import React from "react";
-import ImgProd from "Images/prod_round_shelf.png";
+import IcoDropdown from "Icons/dropdown.svg";
 const OrderItem = () => {
   return (
-    <div className="order-item">
-      <figure>
-        <img src={ImgProd} alt="product" />
-      </figure>
+    <div class="product-info">
       <div>
-        <p className="product-name">Round shelf</p>
+        <p class="date">04.25.2021</p>
+        <p class="count-articles">6 articles</p>
       </div>
       <div>
-        <p className="product-price">$ 120,00</p>
+        <p class="product-price">$ 120,00</p>
+        <figure>
+          <img src={IcoDropdown} alt="arrow" />
+        </figure>
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ import NotFound from "Pages/404/NotFound";
 import Home from "Pages/Home/Home";
 import Account from "Pages/Account/Account";
 import Order from "Pages/Order/Order";
+import Orders from "Pages/Orders/Orders";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/order",
     element: <Order />,
+  },
+  {
+    path: "/my-orders",
+    element: <Orders />,
   },
   {
     path: "*",

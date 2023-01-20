@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "Components/Layout/Layout";
-import OrderList from "Containers/OrderList";
+import MyOrder from "Containers/MyOrder";
 import "./Order.css";
 const Order = () => {
   return (
@@ -16,7 +16,7 @@ const Order = () => {
             <p className="final-price">$ 560.00</p>
           </div>
         </div>
-        <OrderList />
+        <MyOrder />
       </div>
     </Layout>
   );

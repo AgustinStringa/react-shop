@@ -17,25 +17,25 @@
 }
 
 .resume .count-articles,
-.order-item .product-name {
+.product-info .product-name {
   font-size: var(--font-md);
   color: var(--very-light-pink);
 }
 .resume .final-price,
-.order-item .product-price {
+.product-info .product-price {
   font-weight: 700;
   font-family: "Roboto";
 }
 
-.order-item {
+.product-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 36px;
 }
-.order-item figure {
+.product-info figure {
   margin: 0;
 }
-.order-item img {
+.product-info img {
   border-radius: 16px;
 }

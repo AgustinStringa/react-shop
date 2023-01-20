@@ -1,8 +1,9 @@
 import React from "react";
-import OrderItem from "../components/OrderItem/OrderItem";
+import OrderItem from "Components/OrderItem/OrderItem";
 const OrderList = () => {
   return (
-    <div className="order-list">
+    <div className="">
+      <OrderItem />
       <OrderItem />
     </div>
   );
