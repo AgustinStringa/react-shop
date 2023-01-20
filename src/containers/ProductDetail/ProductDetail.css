@@ -1,0 +1,94 @@
+.detail-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  background: white;
+  z-index: 4;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+.detail-card figure {
+  margin: 0;
+}
+.detail-card div:nth-child(1) {
+  margin-bottom: 1rem;
+}
+.detail-card div:nth-child(1) img {
+  width: 100%;
+  border-radius: 1.875rem;
+}
+@media (min-width: 768px) {
+  .detail-card div:nth-child(1) {
+    flex-grow: 0;
+    height: 385px;
+  }
+  /* .detail-card div:nth-child(1) figure {
+    margin: 0 auto;
+  } */
+}
+
+.detail-card div:nth-child(2) p:nth-child(1) {
+  margin-bottom: 24px;
+}
+
+.detail-card div:nth-child(2) p:nth-child(1) span:nth-child(1) {
+  margin-bottom: 8px;
+}
+.detail-card div:nth-child(2),
+.detail-card div:nth-child(3) {
+  padding: 0 32px;
+}
+.detail-card div:nth-child(2) {
+  margin-bottom: 1.5rem;
+}
+.detail-card div:nth-child(3) {
+  margin-bottom: 24px;
+}
+.detail-card p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-sm);
+}
+.detail-card .detail-price {
+  font-weight: bold;
+  font-family: "Roboto";
+}
+.detail-card .detail-name,
+.detail-card .detail-description {
+  color: var(--gray);
+}
+
+.detail-card button {
+  font-size: var(--font-sm);
+  padding: 0;
+}
+
+.detail-card .detail-close {
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  display: grid;
+  height: 50px;
+  position: absolute;
+  left: 20px;
+  place-items: center;
+  top: 20px;
+  width: 50px;
+  z-index: 5;
+}
+
+@media (min-width: 768px) {
+  .detail-card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    left: initial;
+    right: 0;
+    width: 380px;
+  }
+}

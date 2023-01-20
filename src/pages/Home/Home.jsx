@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "Components/Layout/Layout";
 import ProductList from "Containers/ProductList";
 import "./Home.css";
+import ProductDetail from "Containers/ProductDetail/ProductDetail";
 const Home = () => {
   return (
     <Layout>
@@ -9,6 +10,7 @@ const Home = () => {
         <section className="product-list">
           <ProductList />
         </section>
+        <ProductDetail />
       </div>
     </Layout>
   );
