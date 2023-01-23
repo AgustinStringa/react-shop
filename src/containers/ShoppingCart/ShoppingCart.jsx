@@ -3,29 +3,14 @@ import ImgProd from "Images/prod_fridge.png";
 import IcoClose from "Icons/icon_close.png";
 import Button from "Components/ui/button/Button";
 import "./ProductDetail.css";
-const ProductDetail = () => {
-  const [showDetail, setShowDetail] = useState(true);
+const ShoppingCart = ({showCart, setShowCart}) => {
+
   return (
     <>
-    {showDetail && <div className="detail-card">
-      <div>
-        <figure>
-          <img src={ImgProd} alt="" className="detail-image" />
-        </figure>
-      </div>
+    {showCart && <div className="detail-card">
 
-      <div>
-        <p>
-          <span className="detail-price">$ 120,00</span>
-          <span className="detail-name">Retro refrigerator</span>
-        </p>
-        <p className="detail-description">
-          With its functional and practical interior, this refrigerator also
-          fulfills a decorative function, adding personality and a retro-vintage
-          aesthetic to your kitchen or workplace.
-        </p>
-      </div>
-
+        <h2>Shopping cart</h2>
+        {/* RENDERIZAR LISTA */}
       <div>
         <Button>
           <svg
@@ -40,13 +25,13 @@ const ProductDetail = () => {
               fill="white"
             />
           </svg>
-          Add to cart
+          Checkout
         </Button>
       </div>
       <figure className="detail-close">
-        {/* <img src={IcoClose} alt="" onClick={()=>{setShowDetail(!showDetail)}}/> */}
+        {/* <img src={IcoClose} alt="" onClick={()=>{setShowCart(!showCart)}}/> */}
           <svg 
-          onClick={()=>{setShowDetail(!showDetail)}}
+          onClick={()=>{setShowCart(!showCart)}}
           width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path 
 
@@ -59,4 +44,4 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail;
+export default ShoppingCart;
