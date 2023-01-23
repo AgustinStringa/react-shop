@@ -1,0 +1,9 @@
+.error-form-message {
+    font-weight: 400;
+    color: var(--red-warning);
+    margin: 1rem auto 2rem auto;
+    font-size: 1.2rem;
+    border: 1px solid var(--red-warning);
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+}

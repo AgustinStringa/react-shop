@@ -4,7 +4,6 @@ const InputForm = ({
   type = "text",
   placeholder = "*****",
   id = null,
-  disabled = false,
 }) => {
   return (
     <input
@@ -12,7 +11,6 @@ const InputForm = ({
       type={type}
       name=""
       id={id}
-      disabled={disabled}
       placeholder={placeholder}
     />
   );

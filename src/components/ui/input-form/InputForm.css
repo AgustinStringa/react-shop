@@ -1,6 +1,13 @@
 .input-form {
   background-color: var(--text-input-field);
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   padding: 0.75rem 0.5rem;
+}
+.input-field-error > input {
+  color: var(--red-warning);
+  border: 1px solid var(--red-warning);
+}
+.input-field-error > label {
+  color: var(--red-warning);
 }
