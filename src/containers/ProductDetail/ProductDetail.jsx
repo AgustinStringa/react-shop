@@ -1,23 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import ImgProd from "Images/prod_fridge.png";
 import IcoClose from "Icons/icon_close.png";
 import Button from "Components/ui/button/Button";
 import "./ProductDetail.css";
 const ProductDetail = () => {
+  const [showDetail, setShowDetail] = useState(true);
   return (
-    <div class="detail-card">
+    <>
+    {showDetail &&     <div className="detail-card">
       <div>
         <figure>
-          <img src={ImgProd} alt="" class="detail-image" />
+          <img src={ImgProd} alt="" className="detail-image" />
         </figure>
       </div>
 
       <div>
         <p>
-          <span class="detail-price">$ 120,00</span>
-          <span class="detail-name">Retro refrigerator</span>
+          <span className="detail-price">$ 120,00</span>
+          <span className="detail-name">Retro refrigerator</span>
         </p>
-        <p class="detail-description">
+        <p className="detail-description">
           With its functional and practical interior, this refrigerator also
           fulfills a decorative function, adding personality and a retro-vintage
           aesthetic to your kitchen or workplace.
@@ -41,10 +43,12 @@ const ProductDetail = () => {
           Add to cart
         </Button>
       </div>
-      <figure class="detail-close">
-        <img src={IcoClose} alt="" />
+      <figure className="detail-close">
+        <img src={IcoClose} alt="" onClick={()=>{setShowDetail(!showDetail)}}/>
       </figure>
-    </div>
+    </div>}
+
+    </>
   );
 };
 
