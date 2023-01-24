@@ -1,0 +1,39 @@
+.window-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    background: white;
+    z-index: 4;
+    border: 1px solid #dbdbdb;
+    /* box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); */
+    padding: 2rem;
+}
+@media (min-width: 768px) {
+    .window-container {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      right: 0;
+      width: auto;
+      max-width: 500px;
+    }
+}
+.window-container .detail-close {
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: grid;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    place-items: center;
+    top: 20px;
+    z-index: 5;
+}
+

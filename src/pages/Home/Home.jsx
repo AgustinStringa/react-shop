@@ -3,6 +3,8 @@ import Layout from "Containers/Layout/Layout";
 import ProductList from "Containers/ProductList";
 import "Styles/Home.css";
 import ProductDetail from "Containers/ProductDetail/ProductDetail";
+import LateralWindow from "Containers/LateralWindow";
+import ShoppingCart from "Containers/ShoppingCart/ShoppingCart";
 const Home = () => {
   return (
     <Layout>
@@ -10,7 +12,11 @@ const Home = () => {
         <section className="product-list">
           <ProductList />
         </section>
-        <ProductDetail />
+        {/* <ProductDetail /> */}
+        <LateralWindow>
+          {/* <ProductDetail/> */}
+          <ShoppingCart/>
+        </LateralWindow>
       </div>
     </Layout>
   );

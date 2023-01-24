@@ -2,3 +2,32 @@
     overflow-y: scroll;
     max-height: 50vh;
 }
+.window-container .product-item img {
+    width: 60px;
+    cursor: pointer;
+}
+.window-container .product-item figure {
+    position: relative;
+}
+.window-container .product-item figure::after {
+    content: url("../assets/icons/icon_close.png");
+    font-size: 2rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    filter: brightness(10);
+    transform: translateX(50%);
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+.window-container .product-item figure:hover img {
+    filter: brightness(0.4);
+}
+.window-container .product-item figure:hover::after {
+    display: block;
+}
+.window-container .order-list  {
+    margin: 2rem 0;
+}
+  

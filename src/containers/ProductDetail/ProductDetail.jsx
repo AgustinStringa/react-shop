@@ -1,13 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 import ImgProd from "Images/prod_fridge.png";
 import IcoClose from "Icons/icon_close.png";
 import Button from "Components/ui/button/Button";
 import "./ProductDetail.css";
 const ProductDetail = () => {
-  const [showDetail, setShowDetail] = useState(true);
+
   return (
     <>
-    {showDetail && <div className="detail-card">
+    {<div className="detail-card">
       <div>
         <figure>
           <img src={ImgProd} alt="" className="detail-image" />
@@ -43,16 +43,6 @@ const ProductDetail = () => {
           Add to cart
         </Button>
       </div>
-      <figure className="detail-close">
-        {/* <img src={IcoClose} alt="" onClick={()=>{setShowDetail(!showDetail)}}/> */}
-          <svg 
-          onClick={()=>{setShowDetail(!showDetail)}}
-          width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path 
-
-          d="M0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L0.292893 12.2929ZM13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L13.7071 1.70711ZM1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L12.2929 13.7071ZM1.70711 13.7071L13.7071 1.70711L12.2929 0.292893L0.292893 12.2929L1.70711 13.7071ZM0.292893 1.70711L12.2929 13.7071L13.7071 12.2929L1.70711 0.292893L0.292893 1.70711Z" fill="#797979"/>
-          </svg>
-      </figure>
     </div>}
 
     </>
