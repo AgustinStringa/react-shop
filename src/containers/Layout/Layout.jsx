@@ -2,7 +2,7 @@ import React from "react";
 import Header from "Containers/Layout/Header/Header";
 import ContainerContent from 'Containers/ContainerContent'
 const Layout = ({ children }) => {
-  const logged = false;
+  const logged = true;
   return (
     <div className="layout">
      {logged && <Header />}

@@ -5,13 +5,14 @@ import InputForm from "Components/ui/input-form/InputForm";
 import { Link } from "react-router-dom";
 import ImgEmail from "Images/email.svg";
 import "./PasswordRecovery.css";
+import Layout from 'Containers/Layout/Layout'
 const PasswordRecovery = () => {
   const [emailSent, setEmailSent] = useState(false);
   const sendEmail = () => {
     setEmailSent(true);
   };
   return (
-    <div className="container-password-recovery">
+    <Layout>
       <Logo height="50px" classes={["logo-mobile"]} />
 
       {!emailSent ? (
@@ -62,7 +63,7 @@ const PasswordRecovery = () => {
           </p>
         </>
       )}
-    </div>
+    </Layout>
   );
 };
 

@@ -86,12 +86,9 @@ ul {
 }
 
 .form-link {
+  display: block;
   color: var(--hospital-green);
   text-decoration: none;
-}
-.forgot-message,
-.back-message,
-.resend {
   margin: 1.875rem 0 1.875rem 0;
   text-align: center;
   font-size: var(--font-md);
