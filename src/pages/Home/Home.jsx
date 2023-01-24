@@ -12,11 +12,10 @@ const Home = () => {
         <section className="product-list">
           <ProductList />
         </section>
-        {/* <ProductDetail /> */}
-        <LateralWindow>
-          {/* <ProductDetail/> */}
+        {/* <LateralWindow>
+          <ProductDetail/>
           <ShoppingCart/>
-        </LateralWindow>
+        </LateralWindow> */}
       </div>
     </Layout>
   );

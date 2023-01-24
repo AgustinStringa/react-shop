@@ -3,18 +3,15 @@ import IcoCart from "../../../assets/icons/icon_shopping_cart.svg";
 import { Link } from "react-router-dom";
 import MainMenuDesktop from "../MainMenuDesktop/MainMenuDesktop";
 import "Styles/Cart.css";
-import ShoppingCart from 'Containers/ShoppingCart/ShoppingCart'
 const Cart = () => {
-  const [showCart, setShowCart] = useState(false);  
   return (
     <>
     <div className="menu-cart">
       <MainMenuDesktop />
-      <button onClick={()=>{console.log("click", showCart);setShowCart(!showCart)}}>
+      <button className="button-cart">
         <img src={IcoCart} />
       </button>
     </div>
-      {showCart && <ShoppingCart showCart={showCart} setShowCart={setShowCart}/>}
     </>
   );
 };
