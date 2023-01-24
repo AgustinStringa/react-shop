@@ -2,7 +2,7 @@ import React from "react";
 import Prod1 from "Images/prod_fridge.png";
 import IcoAddCart from "Icons/bt_add_to_cart.svg";
 import IcoAddedCart from "Icons/bt_added_to_cart.svg";
-const ProductItem = () => {
+const ProductCard = () => {
   //TODO, PRODUCT DETAIL MIGHT BE A RENDER PROP, ONDETAL={()=>{}}
   return (
     <div className="product-card">
@@ -22,4 +22,4 @@ const ProductItem = () => {
   );
 };
 
-export default ProductItem;
+export default ProductCard;

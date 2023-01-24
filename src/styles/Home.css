@@ -24,11 +24,11 @@
 }
 
 .product-card__price {
-  margin: 4px 0;
-  font-weight: 700;
+  margin: .5rem 0 .25rem 0;
+  font-size: var(--font-md);
 }
 .product_card__description {
-  margin: 0 0 8px 0;
+  /* margin: 0 0 8px 0; */
   font-size: var(--font-sm);
   color: var(--gray);
 }
@@ -38,9 +38,8 @@
 }
 .product-card__image {
   /* width: 100%; */
-  border-radius: 16px;
+  border-radius: 1rem;
 }
-
 .cart-ico {
   cursor: pointer;
 }

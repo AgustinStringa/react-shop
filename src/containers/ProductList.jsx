@@ -1,10 +1,10 @@
 import React from "react";
-import ProductItem from "Components/ProductItem/ProductItem";
+import ProductCard from "Components/ProductCard/ProductCard";
 const ProductList = () => {
   return (
     <>
-      <ProductItem />
-      <ProductItem />
+      <ProductCard />
+      <ProductCard />
     </>
   );
 };
