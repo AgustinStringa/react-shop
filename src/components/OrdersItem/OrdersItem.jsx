@@ -1,8 +1,8 @@
 import React from "react";
 import IcoDropdown from "Icons/dropdown.svg";
-const OrderItem = () => {
+const OrdersItem = () => {
   return (
-    <div class="product-info">
+    <div class="orders-item">
       <div>
         <p class="date">04.25.2021</p>
         <p class="count-articles">6 articles</p>
@@ -17,4 +17,4 @@ const OrderItem = () => {
   );
 };
 
-export default OrderItem;
+export default OrdersItem;

@@ -1,15 +1,15 @@
 import React from "react";
-import ProductInfo from "Components/ProductInfo/ProductInfo";
+import ProductItem from "Components/ProductItem/ProductItem";
 import 'Styles/MyOrder.css'
 const MyOrder = () => {
   return (
     <div className="order-list">
-      <ProductInfo />
-      <ProductInfo />
-      <ProductInfo />
-      <ProductInfo />
-      <ProductInfo />
-      <ProductInfo />
+      <ProductItem />
+      <ProductItem />
+      <ProductItem />
+      <ProductItem />
+      <ProductItem />
+      <ProductItem />
     </div>
   );
 };

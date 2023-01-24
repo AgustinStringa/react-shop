@@ -1,10 +1,10 @@
 import React from "react";
-import OrderItem from "Components/OrderItem/OrderItem";
+import OrdersItem from "Components/OrdersItem/OrdersItem";
 const OrderList = () => {
   return (
     <div className="">
-      <OrderItem />
-      <OrderItem />
+      <OrdersItem />
+      <OrdersItem />
     </div>
   );
 };

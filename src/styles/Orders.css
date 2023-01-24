@@ -1,34 +1,34 @@
-.product-info {
+.orders-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 36px;
+  margin-bottom: 2.25rem;
 }
 
-.product-info .date {
+.orders-item .date {
   font-weight: 700;
-  margin: 0 0 4px 0;
+  margin: 0 0 .25rem 0;
   font-size: var(--font-bg);
 }
-.product-info .count-articles {
+.orders-item .count-articles {
   font-size: var(--font-md);
   color: var(--very-light-pink);
   margin: 0;
 }
-.product-info div:nth-child(2) {
+.orders-item div:nth-child(2) {
   display: flex;
   align-items: center;
 }
 
-.product-info div:nth-child(2) > * {
+.orders-item div:nth-child(2) > * {
   flex-grow: 0;
 }
-.product-info div:nth-child(2) > p.product-price {
+.orders-item div:nth-child(2) > p.product-price {
   font-family: "Roboto";
   font-weight: 700;
-  margin-right: 12px;
+  margin-right: 1rem;
 }
-.product-info div:nth-child(2) figure {
+.orders-item div:nth-child(2) figure {
   display: flex;
   place-items: center;
   margin: 0;
