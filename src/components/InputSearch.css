@@ -1,0 +1,32 @@
+.filter-search {
+    position: relative;
+}
+
+.filter-search__input {
+    width: 100%;
+    height: 100%;
+    padding: 12px 48px;
+    border: none;
+    background-color: var(--text-input-field);
+    font-size: var(--font-sm);
+    color: var(--very-light-pink);
+    font-family: "Quicksand";
+    border-radius: 16px;
+}
+
+.filter-search__button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
+
+.search-button figure {
+    margin: 0;
+}

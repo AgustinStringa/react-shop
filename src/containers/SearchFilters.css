@@ -1,0 +1,17 @@
+.search-filters {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .search-filters {
+        justify-self: flex-start;
+        align-items: center;
+        justify-content: start;
+        flex-direction: row;
+
+        gap: 24px;
+    }
+}

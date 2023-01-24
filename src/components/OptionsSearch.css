@@ -1,0 +1,22 @@
+.filter-order {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 768px) {
+    .filter-order {
+      width: auto;
+      display: block;
+    }
+  }
+  .filter-order .filter-order-label {
+    font-weight: 700;
+    font-size: var(--font-md);
+  }
+  .filter-order-select {
+    background: transparent;
+    border: none;
+    font-family: "Quicksand";
+    font-size: var(--font-md);
+  }

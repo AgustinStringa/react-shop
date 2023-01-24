@@ -5,10 +5,12 @@ import "Styles/Home.css";
 import ProductDetail from "Containers/ProductDetail/ProductDetail";
 import LateralWindow from "Containers/LateralWindow";
 import ShoppingCart from "Containers/ShoppingCart/ShoppingCart";
+import SearchFilters from "Containers/SearchFilters";
 const Home = () => {
   return (
     <Layout>
       <div className="container">
+        <SearchFilters/>
         <section className="product-list">
           <ProductList />
         </section>
