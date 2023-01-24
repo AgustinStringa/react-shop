@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "Containers/Layout/Layout";
 import Button from "Components/ui/button/Button";
-import InputForm from "Components/ui/input-form/InputForm";
+
 const Account = () => {
   return (
     <Layout>
@@ -11,16 +11,12 @@ const Account = () => {
         <form action="" className="">
           <div className="input-field">
             <label htmlFor="name">Name</label>
-            <InputForm type="text" placeholder="Camila Yokoo" disabled={true} />
+            <input id="name" type="text" className="input-form" placeholder="Camila Yokoo" />
           </div>
 
           <div className="input-field">
             <label htmlFor="email">Email address</label>
-            <InputForm
-              type="email"
-              placeholder="camilayokoo@gmail.com"
-              disabled={true}
-            />
+            <input type="email" name="email" id="email" placeholder="camilayokoo@gmail.com"/>
           </div>
 
           <div className="input-field">

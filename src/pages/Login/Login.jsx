@@ -1,11 +1,11 @@
 import React, { useEffect , useState} from "react";
 import Button from "Components/ui/button/Button";
-import InputForm from "Components/ui/input-form/InputForm";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Logo from "Components/Logo/Logo";
 import ErrorFormMessage from 'Components/ui/ErrorFormMessage/ErrorFormMessage'
 import Layout from 'Containers/Layout/Layout'
+import 'Styles/InputForm.css'
 const Login = () => {
   //TODO: SET DISABLED FORM WHEN ERRORFORM 
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ const Login = () => {
         </div>
         <div className="input-field">
           <label htmlFor="password">Password</label>
-          <InputForm type="password" placeholder="*********" />
+          <input className="input-form" type="password" id="password" placeholder="*********" />
         </div>
         {errorForm && <ErrorFormMessage text="Invalid user ID and password combination "/>}
 

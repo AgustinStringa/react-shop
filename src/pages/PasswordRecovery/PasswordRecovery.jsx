@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Logo from "Components/Logo/Logo";
 import Button from "Components/ui/button/Button";
-import InputForm from "Components/ui/input-form/InputForm";
 import { Link } from "react-router-dom";
 import ImgEmail from "Images/email.svg";
 import "./PasswordRecovery.css";
@@ -25,11 +24,8 @@ const PasswordRecovery = () => {
           <form action="" className="recovery-form">
             <div className="input-field">
               <label htmlFor="email">Email address</label>
-              <InputForm
-                type="email"
-                id="email"
-                placeholder="camilayokoo@gmail.com"
-              />
+              <input type="email" name="email" id="email"
+                placeholder="camilayokoo@gmail.com" />
             </div>
             <Button text="Submit" onClick={() => sendEmail()} />
           </form>

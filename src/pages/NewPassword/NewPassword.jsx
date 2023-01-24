@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "Components/ui/button/Button";
-import InputForm from "Components/ui/input-form/InputForm";
 import Logo from "Components/Logo/Logo";
 import Layout from 'Containers/Layout/Layout'
 const NewPassword = () => {
@@ -13,11 +12,11 @@ const NewPassword = () => {
         <form action="">
           <div className="input-field">
             <label htmlFor="password">Password</label>
-            <InputForm type="password" placeholder="*********" />
+            <input type="password" name="password" id="password" placeholder="*********" />
           </div>
           <div className="input-field">
             <label htmlFor="repeat-password">Re-enter password</label>
-            <InputForm type="password" placeholder="*********" />
+            <input type="password" name="repeat-password" id="repeat-password" placeholder="*********" />
           </div>
           <Button text="Confirm" />
         </form>
