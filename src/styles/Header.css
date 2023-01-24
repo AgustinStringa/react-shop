@@ -5,6 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: var(--width-bg);
+  margin: 0 auto;
+  padding: 1rem 0;
 }
 .desktop-nav {
   display: none;

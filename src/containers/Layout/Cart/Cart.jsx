@@ -2,10 +2,10 @@ import React, {useState, useEffect} from "react";
 import IcoCart from "../../../assets/icons/icon_shopping_cart.svg";
 import { Link } from "react-router-dom";
 import MainMenuDesktop from "../MainMenuDesktop/MainMenuDesktop";
-import "./Cart.css";
+import "Styles/Cart.css";
 import ShoppingCart from 'Containers/ShoppingCart/ShoppingCart'
 const Cart = () => {
-  const [showCart, setShowCart] = useState(true);  
+  const [showCart, setShowCart] = useState(false);  
   return (
     <>
     <div className="menu-cart">

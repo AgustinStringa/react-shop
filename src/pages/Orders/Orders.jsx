@@ -1,6 +1,6 @@
 import React from "react";
 import OrderList from "Containers/OrderList";
-import Layout from "Layout/Layout";
+import Layout from "Containers/Layout/Layout";
 import "./Orders.css";
 const Orders = () => {
   return (

@@ -26,16 +26,19 @@ ul {
   list-style: none;
   padding: 0;
 }
-.container {
+.container-content {
   margin: 0 auto;
   width: var(--width-mobile);
   padding: 2rem 0;
+  height: 100vh;
 }
 
 @media (min-width: 768px) {
-  .container {
+  .container-content {
     width: 80%;
+    max-width: var(--width-bg);
     padding: 2rem 0;
+    max-height: 100vh;
   }
 }
 .container-signup,
@@ -71,7 +74,7 @@ ul {
 .input-field {
   display: flex;
   flex-direction: column;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 .sign-up-form label,

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import IcoMenu from "Icons/icon_menu.png";
-import LinkHeader from "Layout/LinksHeader/LinkHeader";
-import "./Nav.css";
+import LinkHeader from "Containers/Layout/LinksHeader/LinkHeader";
+import "Styles/Nav.css";
 const Nav = ({ MobileMenu }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
@@ -28,7 +28,7 @@ const Nav = ({ MobileMenu }) => {
           </li>
         </ul>
       </nav>
-      {/* {asdasd} */}
+      {/* {********} */}
       <div className="mobile-nav">
         <img
           src={IcoMenu}

@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "Images/logo_yard_sale.svg";
-import "./Logo.css";
+import "Styles/Logo.css";
 import { Link } from "react-router-dom";
 const Logo = ({ width = "auto", height = "auto", classes = [] }) => {
   return (

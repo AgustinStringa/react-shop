@@ -1,6 +1,6 @@
 import React from "react";
-import "./reset.css";
-import "./App.scss";
+import "Styles/reset.css";
+import "Styles/App.scss";
 import NewPassword from "Pages/NewPassword/NewPassword";
 import Login from "Pages/Login/Login";
 import PasswordRecovery from "Pages/PasswordRecovery/PasswordRecovery";

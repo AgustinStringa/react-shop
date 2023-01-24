@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "Components/Layout/Layout";
+import Layout from "Containers/Layout/Layout";
 import Button from "Components/ui/button/Button";
 import InputForm from "Components/ui/input-form/InputForm";
 const Account = () => {

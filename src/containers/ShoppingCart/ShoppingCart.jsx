@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import ImgProd from "Images/prod_fridge.png";
 import IcoClose from "Icons/icon_close.png";
 import Button from "Components/ui/button/Button";
-import "./ProductDetail.css";
+import "Styles/ProductDetail.css";
 const ShoppingCart = ({showCart, setShowCart}) => {
 
   return (

@@ -1,21 +1,22 @@
 import React, { useEffect , useState} from "react";
 import Button from "Components/ui/button/Button";
 import InputForm from "Components/ui/input-form/InputForm";
-import "Components/App.scss";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Logo from "Components/Logo/Logo";
 import ErrorFormMessage from 'Components/ui/ErrorFormMessage/ErrorFormMessage'
+import Layout from 'Containers/Layout/Layout'
 const Login = () => {
   //TODO: SET DISABLED FORM WHEN ERRORFORM 
   const navigate = useNavigate();
   const emailRef = React.useRef(null);
-  const [errorForm, setErrorForm] = useState(true);
+  const [errorForm, setErrorForm] = useState(false);
   React.useEffect(()=>{
-    emailRef.current.parentElement.classList.add("input-field-error");
+    // emailRef.current.parentElement.classList.add("input-field-error");
   },[emailRef])
   return (
-    <div className="container-login">
+    <Layout>
+
       <Logo height="50px" classes={["logo-mobile"]} />
       <h1 className="main-title">Login</h1>
       <form action="" className="sign-up-form">
@@ -45,7 +46,8 @@ const Login = () => {
           navigate("/signup");
         }}
       ></Button>
-    </div>
+
+    </Layout>
   );
 };
 

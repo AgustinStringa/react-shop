@@ -1,6 +1,6 @@
 import React from "react";
 import ProductInfo from "Components/ProductInfo/ProductInfo";
-import './MyOrder.css'
+import 'Styles/MyOrder.css'
 const MyOrder = () => {
   return (
     <div className="order-list">

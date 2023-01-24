@@ -26,6 +26,7 @@
   border: 1px solid var(--hospital-green);
   color: var(--hospital-green);
   &:hover {
-    background-color: unset;
+    background-color: var(--hospital-green);
+    color: var(--white);
   }
 }

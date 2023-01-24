@@ -2,7 +2,6 @@ import React from "react";
 import Button from "Components/ui/button/Button";
 import InputForm from "Components/ui/input-form/InputForm";
 import "./NewPassword.css";
-import "Components/App.scss";
 import Logo from "Components/Logo/Logo";
 
 const NewPassword = () => {
