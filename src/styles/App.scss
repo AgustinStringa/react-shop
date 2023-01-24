@@ -41,27 +41,9 @@ ul {
     max-height: 100vh;
   }
 }
-.container-signup,
-.container-login,
-.container-password-recovery,
-.account-container,
-.order-container,
-.my-orders-container {
-  max-width: 375px;
-  margin: 2rem auto;
-  height: 100vh;
-}
 
-@media (min-width: 1280px) {
-  .container-signup,
-  .container-login,
-  .container-password-recovery,
-  .account-container,
-  .order-container,
-  .my-orders-container {
-    max-width: 768px;
-  }
-}
+
+
 .main-title {
   margin: 1rem 0;
   font-size: var(--font-bg);

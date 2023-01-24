@@ -5,10 +5,10 @@ import InputForm from "Components/ui/input-form/InputForm";
 const Account = () => {
   return (
     <Layout>
-      <div className="container account-container">
+      
         <h1 className="main-title">My account</h1>
 
-        <form action="" className="create-account-form">
+        <form action="" className="">
           <div className="input-field">
             <label htmlFor="name">Name</label>
             <InputForm type="text" placeholder="Camila Yokoo" disabled={true} />
@@ -34,7 +34,7 @@ const Account = () => {
         </form>
 
         <Button text="Edit" outline={true} />
-      </div>
+      
     </Layout>
   );
 };
