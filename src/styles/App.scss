@@ -98,6 +98,10 @@ ul {
 }
 .resend span {
   margin-right: 0.5rem;
+  color: var(--hospital-green);
+}
+.resend a {
+  text-decoration: underline;
 }
 .forgot-link {
   font-size: var(--font-sm);

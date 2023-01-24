@@ -47,17 +47,17 @@ const PasswordRecovery = () => {
             password
           </p>
 
-          <div class="container-email-image">
-            <img src={ImgEmail} alt="correo" class="email-image" />
+          <div className="container-email-image">
+            <img src={ImgEmail} alt="correo" className="email-image" />
           </div>
 
           <Link to="/login">
             <Button text={"Login"} />
           </Link>
 
-          <p class="resend">
+          <p className="resend">
             <span>Didn’t receive the email?</span>
-            <a href="/" class="form-link">
+            <a href="/">
               Resend
             </a>
           </p>
