@@ -9,7 +9,7 @@ import SearchFilters from "Containers/SearchFilters";
 const Home = () => {
   return (
     <Layout>
-      <div className="container">
+
         <SearchFilters/>
         <section className="product-list">
           <ProductList />
@@ -18,7 +18,7 @@ const Home = () => {
           <ProductDetail/>
           <ShoppingCart/>
         </LateralWindow> */}
-      </div>
+
     </Layout>
   );
 };

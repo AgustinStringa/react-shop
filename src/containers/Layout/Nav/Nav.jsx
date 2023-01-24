@@ -1,33 +1,14 @@
 import React, { useState } from "react";
 import IcoMenu from "Icons/icon_menu.png";
-import LinkHeader from "Containers/Layout/LinksHeader/LinkHeader";
 import "Styles/Nav.css";
+import CategoryList from "Containers/Layout/CategoryList/CategoryList";
 const Nav = ({ MobileMenu }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
     <>
-      <nav className="desktop-nav">
-        <ul>
-          <li className="category-item">
-            <LinkHeader text={"All"} href={"/"} />
-          </li>
-          <li>
-            <LinkHeader text={"Clothes"} href={"/"} />
-          </li>
-          <li>
-            <LinkHeader text={"Electronics"} href={"/"} />
-          </li>
-          <li>
-            <LinkHeader text={"Furnitures"} href={"/"} />
-          </li>
-          <li>
-            <LinkHeader text={"Toys"} href={"/"} />
-          </li>
-          <li>
-            <LinkHeader text={"Others"} href={"/"} />
-          </li>
-        </ul>
-      </nav>
+      <div className="desktop-nav">
+        <CategoryList/>
+      </div>
       {/* {********} */}
       <div className="mobile-nav">
         <img
