@@ -2,7 +2,21 @@
   display: flex;
   align-items: center;
 }
+
 .button-cart {
   all: unset;
   cursor: pointer;
+  position: relative;
+}
+
+.ico-cart-notify::after {
+  top: 0;
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  right: 0;
+  border-radius: 100%;
+  background-color: var(--hospital-green);
 }
