@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import "Styles/reset.css";
 import "Styles/App.scss";
 import NewPassword from "Pages/NewPassword/NewPassword";
@@ -9,6 +9,7 @@ import Home from "Pages/Home/Home";
 import Account from "Pages/Account/Account";
 import Order from "Pages/Order/Order";
 import Orders from "Pages/Orders/Orders";
+import { ShopContext } from "./context/useShop";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
@@ -50,7 +51,12 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  const [cart, setCart] = useState([]);
+  return <>
+  <ShopContext.Provider value={{cart, setCart}}>
+    <RouterProvider router={router} />;
+  </ShopContext.Provider>
+  </>
 };
 
 export default App;

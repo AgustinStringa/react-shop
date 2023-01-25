@@ -1,17 +1,21 @@
-import React, {useState} from "react";
+import React, {useContext} from "react";
 import ImgProd from "Images/prod_fridge.png";
 import IcoClose from "Icons/icon_close.png";
 import Button from "Components/ui/button/Button";
 import MyOrder from "Containers/MyOrder"
+import useReactShop from 'Hooks/useReactShop'
 import ProductItem from 'Components/ProductItem/ProductItem'// import "Styles/ProductDetail.css";
+import { ShopContext } from "../../context/useShop";
 const ShoppingCart = () => {
-
+  const {cart, setCart} = useContext(ShopContext);
   return (
     <>
     { <div className="">
         <h2>Shopping cart</h2>
         {/* RENDERIZAR LISTA */}
-        <MyOrder/>
+        <MyOrder>
+        {cart.map((el) => <ProductItem/>)}
+        </MyOrder>
       <div>
         <Button>
           <svg

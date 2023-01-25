@@ -1,15 +1,14 @@
 import React from 'react'
 import './LateralWindow.css'
-const LateralWindow = ({children}) => {
+const LateralWindow = ({children, onClose}) => {
   /**
    * TODO
    * PUEDE RECIBIR RENDER PROPS PARA EL CART Y PARA EL DETALLE DE PRODUCTO
    */
   return (
     <div className='window-container'>{children}
-          <figure className="detail-close">
+          <figure className="detail-close" onClick={onClose}>
           <svg 
-        //   onClick={()=>{setShowDetail(!showDetail)}}
           width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path 
 

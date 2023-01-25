@@ -19,6 +19,8 @@ module.exports = {
             Images: path.resolve(__dirname, 'src/assets/images'),
             Layout: path.resolve(__dirname, 'src/components/Layout'),
             Styles: path.resolve(__dirname, 'src/styles'),
+            Hooks: path.resolve(__dirname, 'src/hooks'),
+            Context: path.resolve(__dirname, 'src/context'),
         }
     },
     mode: 'development',

@@ -4,15 +4,15 @@ import './InputSearch.css'
 const InputSearch = () => {
   return (
     <form action="">
-    <div class="filter-search">
+    <div className="filter-search">
       <input
         type="search"
         name=""
         id=""
-        class="filter-search__input"
+        className="filter-search__input"
         placeholder="Search product"
       />
-      <button class="filter-search__button">
+      <button className="filter-search__button">
         <figure>
           <img src={IcoSearch} alt="magnifying glass" />
         </figure>
