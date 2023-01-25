@@ -10,6 +10,7 @@ import Account from "Pages/Account/Account";
 import Order from "Pages/Order/Order";
 import Orders from "Pages/Orders/Orders";
 import { ShopContext } from "./context/useShop";
+import useReactShop from "./hooks/useReactShop";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  const [cart, setCart] = useState([]);
+  const {cart, setCart} = useReactShop();
   return <>
   <ShopContext.Provider value={{cart, setCart}}>
     <RouterProvider router={router} />;
