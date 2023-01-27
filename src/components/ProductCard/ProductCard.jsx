@@ -2,13 +2,17 @@ import React from "react";
 import Prod1 from "Images/prod_fridge.png";
 import IcoAddCart from "Icons/bt_add_to_cart.svg";
 import IcoAddedCart from "Icons/bt_added_to_cart.svg";
-const ProductCard = ({cart, setCart}) => {
+const ProductCard = ({ cart, setCart }) => {
   //TODO, PRODUCT DETAIL MIGHT BE A RENDER PROP, ONDETAL={()=>{}}
 
   const addToCart = () => {
     setCart([
       ...cart,
-      Prod1
+      {
+        image: Prod1,
+        price: 120.00,
+        name: 'Round shelf',
+      }
     ]);
   }
   return (
@@ -21,7 +25,7 @@ const ProductCard = ({cart, setCart}) => {
         </div>
         <div>
           <figure>
-            <img src={IcoAddCart} alt="" className="cart-ico" onClick={addToCart}/>
+            <img src={IcoAddCart} alt="" className="cart-ico" onClick={addToCart} />
           </figure>
         </div>
       </div>

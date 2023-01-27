@@ -1,6 +1,6 @@
 import React from "react";
 import "./Button.scss";
-const Button = ({ text, outline = false, onClick = () => {}, children }) => {
+const Button = ({ text, outline = false, onClick = () => { }, children }) => {
   return (
     <button
       onClick={() => onClick()}

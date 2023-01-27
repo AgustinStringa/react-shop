@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "Styles/reset.css";
 import "Styles/App.scss";
 import NewPassword from "Pages/NewPassword/NewPassword";
@@ -9,9 +9,10 @@ import Home from "Pages/Home/Home";
 import Account from "Pages/Account/Account";
 import Order from "Pages/Order/Order";
 import Orders from "Pages/Orders/Orders";
-import { ShopContext } from "./context/useShop";
+import { ShopContext } from "./context/ShopContext";
 import useReactShop from "./hooks/useReactShop";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Checkout from "Pages/Checkout/Checkout";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -46,17 +47,21 @@ const router = createBrowserRouter([
     element: <Orders />,
   },
   {
+    path: "/checkout",
+    element: <Order />,
+  },
+  {
     path: "*",
     element: <NotFound />,
   },
 ]);
 
 const App = () => {
-  const {cart, setCart} = useReactShop();
+  const { cart, setCart, user, setUser } = useReactShop();
   return <>
-  <ShopContext.Provider value={{cart, setCart}}>
-    <RouterProvider router={router} />;
-  </ShopContext.Provider>
+    <ShopContext.Provider value={{ cart, setCart, user, setUser }}>
+      <RouterProvider router={router} />;
+    </ShopContext.Provider>
   </>
 };
 
