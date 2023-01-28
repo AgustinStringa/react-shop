@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import IcoDropdown from "Icons/dropdown.svg";
 import { Link } from "react-router-dom";
 import "Styles/MainMenuDesktop.css";
+import { ShopContext } from 'Context/ShopContext'
+import { useNavigate } from "react-router-dom";
 
 const MainMenuDesktop = () => {
+  const navigate = useNavigate();
+  const { user, setUser } = useContext(ShopContext);
+  const isLogged = Boolean(user.email);
   const [showDropdown, setShowDropdown] = useState(false);
+  const logOut = () => {
+    setUser({
+      name: '',
+      email: '',
+      password: ''
+    })
+    navigate("/account");
+  }
   return (
     <div className="desktop-main-menu">
       <button
@@ -17,21 +30,35 @@ const MainMenuDesktop = () => {
       </button>
       {showDropdown && (
         <ul>
-          <li>
+          {isLogged && <li>
             <Link to="/orders" className="desktop-main-menu__item">
               My orders
             </Link>
-          </li>
+          </li>}
+          {isLogged ? <>
+            <li>
+              <Link to="/account" className="desktop-main-menu__item">
+                My account
+              </Link>
+            </li>
+            <hr />
+          </>
+            :
+            <li>
+              <Link to="/login" className="desktop-main-menu__item">
+                Login
+              </Link>
+            </li>
+          }
           <li>
-            <Link to="/account" className="desktop-main-menu__item">
-              My account
-            </Link>
-          </li>
-          <hr />
-          <li>
-            <button className="desktop-main-menu__item--logout">
+            {isLogged ? <button className="desktop-main-menu__item--logout" onClick={logOut}>
               Sign out
-            </button>
+            </button> :
+              <button className="desktop-main-menu__item--logout" onClick={() => { navigate("/account") }}>
+                Sign Up
+              </button>
+            }
+
           </li>
         </ul>
       )}
