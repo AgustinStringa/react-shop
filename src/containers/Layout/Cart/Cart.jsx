@@ -8,7 +8,7 @@ import ShoppingCart from 'Containers/ShoppingCart/ShoppingCart'
 import { ShopContext } from 'Context/ShopContext'
 const Cart = () => {
   const { cart } = useContext(ShopContext);
-  const [showCart, setShowCart] = useState(true);
+  const [showCart, setShowCart] = useState(false);
   return (
     <>
       <div className="menu-cart">

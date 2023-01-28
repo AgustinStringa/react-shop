@@ -4,9 +4,17 @@
 }
 
 .button-cart {
-  all: unset;
-  cursor: pointer;
-  position: relative;
+  display: none;
+}
+
+@media (min-width: 768px) {
+
+  .button-cart {
+    all: unset;
+    cursor: pointer;
+    position: relative;
+    display: block;
+  }
 }
 
 .ico-cart-notify::after {

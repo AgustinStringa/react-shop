@@ -10,21 +10,28 @@ const Account = () => {
   const { user, setUser } = useContext(ShopContext);
   const [editing, setEditing] = useState(false);
   const [errorForm, setErrorForm] = useState(false);
+  const [formValues, setFormValues] = useState({
+    name: user.name,
+    email: user.email,
+    password: user.password,
+  });
+  const { name, email, password } = formValues;
   const isLogged = Boolean(user.email);
   const emailRef = React.useRef(null);
   const passwordRef = React.useRef(null);
   const nameRef = React.useRef(null);
-  // const isLogged = true;
 
-  // DEBERIA GUARDAR POR PRIMERA VEZ EN ALGUN LADO, [LOCALSTORAGE]
-  const createAccount = (evt) => {
-    evt.preventDefault();
-    const emailValue = emailRef.current.value.trim()
-    const passwordValue = passwordRef.current.value.trim()
-    const nameValue = nameRef.current.value.trim()
-    const validEmail = Boolean(emailValue);
-    const validPassword = Boolean(passwordValue);
-    const validName = Boolean(nameValue);
+  const handleChange = (evt) => {
+    setFormValues({
+      ...formValues,
+      [evt.target.name]: evt.target.value
+    })
+  }
+
+  const validateFormAccount = () => {
+    const validEmail = Boolean(email);
+    const validPassword = Boolean(password);
+    const validName = Boolean(name);
     if (!validName) {
       nameRef.current.parentElement.classList.add("input-field-error");
     } else {
@@ -40,45 +47,76 @@ const Account = () => {
     } else {
       passwordRef.current.parentElement.classList.remove("input-field-error");
     }
+    return { validEmail, validPassword, validName }
+  }
+  const loadUser = () => {
+    setUser({
+      ...user,
+      name: name,
+      email: email,
+      password: password,
+    });
+    localStorage.setItem('react-shop-user', JSON.stringify({
+      name: name,
+      email: email,
+      password: password,
+    }));
+  }
+  const createAccount = (evt) => {
+    evt.preventDefault();
+    const { validEmail, validPassword, validName } = validateFormAccount();
     if (!validEmail || !validPassword || !validName) {
       setErrorForm(true);
       return false;
     }
     setErrorForm(false);
-    setUser({
-      ...user,
-      name: nameValue,
-      email: emailValue,
-      password: passwordValue,
-    });
+    loadUser();
     navigate("/home");
     //TODO REUSE CODE FOR VALIDATE EDIT ACCOUNT
   }
 
-  // DEBERIA EDITAR EN ALGUN LADO, [LOCALSTORAGE]
-  const editAccount = () => { }
+  const handleSubmit = (evt) => {
+    if (!isLogged) {
+      createAccount(evt);
+    } else if (isLogged && editing) {
+      editAccount(evt);
+    }
+  }
+
+  const editAccount = (evt) => {
+    evt.preventDefault();
+    const { validEmail, validPassword, validName } = validateFormAccount();
+    if (!validEmail || !validPassword || !validName) {
+      setErrorForm(true);
+      return false;
+    };
+    setErrorForm(false);
+    loadUser();
+  }
   return (
     <Layout>
 
       <h1 className="main-title">My account</h1>
 
-      <form action="" className="" onSubmit={createAccount}>
+      <form action="" className="" onSubmit={handleSubmit}>
         <div className="input-field">
           <label htmlFor="name">Name</label>
           <input
-            disabled={isLogged}
-            // value={user.name}
+            disabled={isLogged && !editing}
+            value={name}
+            onChange={handleChange}
             ref={nameRef}
+            name="name"
             id="name" type="text" className="input-form" placeholder="Camila Yokoo" />
         </div>
 
         <div className="input-field">
           <label htmlFor="email">Email address</label>
           <input
-            disabled={isLogged}
-            // value={user.email}
+            disabled={isLogged && !editing}
+            value={email}
             ref={emailRef}
-
+            onChange={handleChange}
             className="input-form"
             type="email" name="email" id="email" placeholder="camilayokoo@gmail.com" />
         </div>
@@ -86,11 +124,13 @@ const Account = () => {
         <div className="input-field">
           <label htmlFor="password">Password</label>
           <input
-            disabled={isLogged}
-            // value={user.password}
+            disabled={isLogged && !editing}
+            value={password}
+            onChange={handleChange}
             ref={passwordRef}
             className="input-form"
-            type="password" name="" id="password" placeholder="*********" />
+            name="password"
+            type="password" id="password" placeholder="*********" />
         </div>
 
         {errorForm && <ErrorFormMessage text="All fields are required " />}
