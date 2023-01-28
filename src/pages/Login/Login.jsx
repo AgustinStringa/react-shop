@@ -14,14 +14,16 @@ const Login = () => {
   const navigate = useNavigate();
   const emailRef = React.useRef(null);
   const passwordRef = React.useRef(null);
-  const [errorForm, setErrorForm] = useState(false);
+  const [errorForm, setErrorForm] = useState(null);
+  const [formValues, setFormValues] = useState({
+    email: '',
+    password: '',
+  });
+  const { email, password } = formValues;
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    const emailValue = emailRef.current.value.trim()
-    const passwordValue = passwordRef.current.value.trim()
-    const validEmail = Boolean(emailValue);
-    const validPassword = Boolean(passwordValue);
+  const validateFormLogin = () => {
+    const validEmail = Boolean(email);
+    const validPassword = Boolean(password);
     if (!validEmail) {
       emailRef.current.parentElement.classList.add("input-field-error");
     } else {
@@ -32,17 +34,39 @@ const Login = () => {
     } else {
       passwordRef.current.parentElement.classList.remove("input-field-error");
     }
+    return {
+      validEmail,
+      validPassword
+    }
+  }
+
+  const handleChange = (evt) => {
+    setFormValues({
+      ...formValues,
+      [evt.target.name]: evt.target.value
+    })
+  }
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    const { validEmail, validPassword } = validateFormLogin();
     if (!validEmail || !validPassword) {
-      setErrorForm(true);
+      setErrorForm('All fields are required');
       return false;
     }
-    setErrorForm(false);
-    setUser({
-      ...user,
-      email: emailValue,
-      password: passwordValue,
-    });
-    navigate("/home");
+    //comparar que los datos sean correctos
+    let USER = {}
+    if (localStorage.getItem("react-shop-user")) {
+      USER = JSON.parse(localStorage.getItem("react-shop-user"));
+    }
+    if (!USER.email || USER.email !== email) {
+      setErrorForm('User Not Found');
+      return false;
+    } else if (USER.email == email && USER.password == password) {
+      setErrorForm(null);
+      navigate("/home");
+    } else {
+      setErrorForm("invalid ID and password combination")
+    }
   }
   return (
     <Layout>
@@ -51,15 +75,20 @@ const Login = () => {
       <form action="" className="sign-up-form" onSubmit={handleSubmit}>
         <div className="input-field" >
           <label htmlFor="password">Email address</label>
-          <input className="input-form" type="email" name="" ref={emailRef} placeholder="camilayokoo@gmail.com" id="email" />
+          <input
+            value={email}
+            onChange={handleChange}
+            className="input-form" type="email" name="email" ref={emailRef} placeholder="camilayokoo@gmail.com" id="email" />
         </div>
         <div className="input-field">
           <label htmlFor="password">Password</label>
           <input
+            value={password}
+            onChange={handleChange}
             ref={passwordRef}
-            className="input-form" type="password" id="password" placeholder="*********" />
+            className="input-form" name="password" type="password" id="password" placeholder="*********" />
         </div>
-        {errorForm && <ErrorFormMessage text="Invalid user ID and password combination " />}
+        {errorForm && <ErrorFormMessage text={errorForm} />}
 
         <Button text="Log In" />
 

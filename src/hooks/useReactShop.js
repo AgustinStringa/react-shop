@@ -7,6 +7,7 @@ const useReactShop = () => {
         INITIAL_USER = JSON.parse(localStorage.getItem("react-shop-user"));
     }
     const [user, setUser] = useState(INITIAL_USER);
+    useEffect(() => { }, [user]);
     return {
         cart,
         setCart,

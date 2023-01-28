@@ -11,11 +11,12 @@ const MainMenuDesktop = () => {
   const isLogged = Boolean(user.email);
   const [showDropdown, setShowDropdown] = useState(false);
   const logOut = () => {
+    localStorage.removeItem("react-shop-user");
     setUser({
       name: '',
       email: '',
-      password: ''
-    })
+      password: '',
+    });
     navigate("/account");
   }
   return (

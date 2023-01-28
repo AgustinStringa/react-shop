@@ -24,7 +24,7 @@ const PasswordRecovery = () => {
           <form action="" className="recovery-form">
             <div className="input-field">
               <label htmlFor="email">Email address</label>
-              <input type="email" name="email" id="email"
+              <input type="email" name="email" id="email" className="input-form"
                 placeholder="camilayokoo@gmail.com" />
             </div>
             <Button text="Submit" onClick={() => sendEmail()} />

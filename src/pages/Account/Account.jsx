@@ -92,6 +92,7 @@ const Account = () => {
     };
     setErrorForm(false);
     loadUser();
+    setEditing(false);
   }
   return (
     <Layout>
