@@ -2,13 +2,26 @@
     overflow-y: scroll;
     max-height: 50vh;
 }
+
+.order-list-checkout .order-list {
+    height: auto;
+    max-height: unset;
+    overflow-y: initial;
+}
+
+.order-list-checkout .order-list figure {
+    width: 300px;
+}
+
 .window-container .product-item img {
     width: 60px;
     cursor: pointer;
 }
+
 .window-container .product-item figure {
     position: relative;
 }
+
 .window-container .product-item figure::after {
     content: url("../assets/icons/icon_close.png");
     font-size: 2rem;
@@ -21,13 +34,15 @@
     height: 48px;
     cursor: pointer;
 }
+
 .window-container .product-item figure:hover img {
     filter: brightness(0.4);
 }
+
 .window-container .product-item figure:hover::after {
     display: block;
 }
-.window-container .order-list  {
+
+.window-container .order-list {
     margin: 2rem 0;
 }
-  

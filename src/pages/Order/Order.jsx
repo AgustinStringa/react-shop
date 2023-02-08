@@ -31,11 +31,13 @@ const Order = () => {
           <p className="final-price">$ {calculatePrice()}</p>
         </div>
       </div>
-      <MyOrder>
-        {cart.map((el) => (
-          <ProductItem {...el} inCart={false} />
-        ))}
-      </MyOrder>
+      <div className="order-list-checkout">
+        <MyOrder>
+          {cart.map((el) => (
+            <ProductItem {...el} inCart={false} />
+          ))}
+        </MyOrder>
+      </div>
     </Layout>
   );
 };
