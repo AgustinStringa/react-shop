@@ -30,7 +30,7 @@ const ProductCard = ({ cart, setCart, productInfo }) => {
       <img src={productInfo.images[0]} alt="" className="product-card__image" />
       <div>
         <div>
-          <p className="product-card__price">{productInfo.price}</p>
+          <p className="product-card__price">$ {productInfo.price}</p>
           <p className="product_card__description">{productInfo.title}</p>
         </div>
         <div>
