@@ -8,6 +8,18 @@ const useReactShop = () => {
     }
     const [user, setUser] = useState(INITIAL_USER);
     const [products, setProducts] = useState([]);
+
+    const getProducts = () => {
+        const API = "https://api.escuelajs.co/api/v1/products?limit=10&offset=10";
+        if (products.length == 0) {
+            async function fetchData() {
+                const res = await fetch(API);
+                const data = await res.json();
+                setProducts([...products, ...data]);
+            }
+            fetchData();
+        }
+    }
     useEffect(() => { }, [user]);
     return {
         cart,
@@ -15,7 +27,8 @@ const useReactShop = () => {
         user,
         setUser,
         products,
-        setProducts
+        setProducts,
+        getProducts
     }
 }
 

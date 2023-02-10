@@ -57,12 +57,26 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  const { cart, setCart, user, setUser, products, setProducts } = useReactShop();
-  return <>
-    <ShopContext.Provider value={{ cart, setCart, user, setUser, products, setProducts }}>
-      <RouterProvider router={router} />;
-    </ShopContext.Provider>
-  </>
+  getProducts;
+  const { cart, setCart, user, setUser, products, setProducts, getProducts } =
+    useReactShop();
+  return (
+    <>
+      <ShopContext.Provider
+        value={{
+          cart,
+          setCart,
+          user,
+          setUser,
+          products,
+          setProducts,
+          getProducts,
+        }}
+      >
+        <RouterProvider router={router} />;
+      </ShopContext.Provider>
+    </>
+  );
 };
 
 export default App;
