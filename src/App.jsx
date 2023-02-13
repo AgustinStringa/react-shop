@@ -53,8 +53,20 @@ const router = createBrowserRouter([
 
 const App = () => {
   getProducts;
-  const { cart, setCart, user, setUser, products, setProducts, getProducts } =
-    useReactShop();
+  const {
+    cart,
+    setCart,
+    user,
+    setUser,
+    products,
+    setProducts,
+    getProducts,
+    filters,
+    setFilters,
+    sortByPrice,
+    sortByRecent,
+    filterProductByName,
+  } = useReactShop();
   return (
     <>
       <ShopContext.Provider
@@ -66,6 +78,11 @@ const App = () => {
           products,
           setProducts,
           getProducts,
+          filters,
+          setFilters,
+          sortByPrice,
+          sortByRecent,
+          filterProductByName,
         }}
       >
         <RouterProvider router={router} />;

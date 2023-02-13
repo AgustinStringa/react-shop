@@ -1,8 +1,18 @@
 import React, { useContext, useEffect } from "react";
 import { ShopContext } from "Context/ShopContext";
+import EmptySearch from "Components/EmptySearch";
 import ProductCard from "Components/ProductCard/ProductCard";
 const ProductList = ({ children }) => {
-  const { cart, setCart, products, getProducts } = useContext(ShopContext);
+  const {
+    cart,
+    setCart,
+    products,
+    getProducts,
+    filters,
+    sortByPrice,
+    sortByRecent,
+    filterProductByName,
+  } = useContext(ShopContext);
   useEffect(() => {
     getProducts();
   }, []);
@@ -11,9 +21,20 @@ const ProductList = ({ children }) => {
     return cart.find((el) => el.id == id);
   };
 
+  let render = products;
+  if (filters.price) {
+    render = sortByPrice(products);
+  } else if (filters.recent) {
+    render = sortByRecent(products);
+  } else if (filters.text != "") {
+    render = filterProductByName(products, filters.text);
+  } else {
+    render = products;
+  }
   return (
     <>
-      {products.map((el) => {
+      {render.map((el) => {
+        console.log(el);
         return (
           <ProductCard
             key={el.id}
@@ -24,6 +45,7 @@ const ProductList = ({ children }) => {
           />
         );
       })}
+      {render.length === 0 && <EmptySearch />}
       {children}
     </>
   );
