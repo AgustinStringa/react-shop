@@ -3,9 +3,9 @@ import Prod1 from "Images/prod_fridge.png";
 import IcoAddCart from "Icons/bt_add_to_cart.svg";
 import IcoAddedCart from "Icons/bt_added_to_cart.svg";
 
-const ProductCard = ({ cart, setCart, productInfo }) => {
+const ProductCard = ({ cart, setCart, productInfo, inCart }) => {
   //TODO, PRODUCT DETAIL MIGHT BE A RENDER PROP, ONDETAL={()=>{}}
-  const [added, setAdded] = useState(false);
+  const [added, setAdded] = useState(inCart);
   const handleAddCart = () => {
     setAdded(!added);
     if (!added) {

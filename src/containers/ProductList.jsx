@@ -6,16 +6,24 @@ const ProductList = ({ children }) => {
   useEffect(() => {
     getProducts();
   }, []);
+
+  const isInCart = (id) => {
+    return cart.find((el) => el.id == id);
+  };
+
   return (
     <>
-      {products.map((el) => (
-        <ProductCard
-          key={el.id}
-          cart={cart}
-          setCart={setCart}
-          productInfo={el}
-        />
-      ))}
+      {products.map((el) => {
+        return (
+          <ProductCard
+            key={el.id}
+            cart={cart}
+            setCart={setCart}
+            productInfo={el}
+            inCart={isInCart(el.id)}
+          />
+        );
+      })}
       {children}
     </>
   );

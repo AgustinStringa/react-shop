@@ -34,7 +34,7 @@ const Order = () => {
       <div className="order-list-checkout">
         <MyOrder>
           {cart.map((el) => (
-            <ProductItem {...el} inCart={false} />
+            <ProductItem {...el} key={el.id} inCart={false} />
           ))}
         </MyOrder>
       </div>

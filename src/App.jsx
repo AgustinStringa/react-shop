@@ -12,7 +12,6 @@ import Orders from "Pages/Orders/Orders";
 import { ShopContext } from "./context/ShopContext";
 import useReactShop from "./hooks/useReactShop";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Checkout from "Pages/Checkout/Checkout";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,10 +44,6 @@ const router = createBrowserRouter([
   {
     path: "/my-orders",
     element: <Orders />,
-  },
-  {
-    path: "/checkout",
-    element: <Order />,
   },
   {
     path: "*",

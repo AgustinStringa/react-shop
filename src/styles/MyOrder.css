@@ -3,6 +3,10 @@
     max-height: 50vh;
 }
 
+.order-list-checkout {
+    padding: 2rem 0;
+}
+
 .order-list-checkout .order-list {
     height: auto;
     max-height: unset;

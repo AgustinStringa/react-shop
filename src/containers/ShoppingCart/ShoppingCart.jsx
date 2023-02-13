@@ -23,7 +23,7 @@ const ShoppingCart = () => {
           <div>
             <Button
               onClick={() => {
-                navigate("/checkout");
+                navigate("/order");
               }}
             >
               <svg

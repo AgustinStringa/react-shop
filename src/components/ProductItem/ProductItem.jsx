@@ -11,7 +11,7 @@ const ProductItem = ({ image, name, price, inCart, id }) => {
 
   return (
     <div className="product-item">
-      <figure onClick={inCart && removeFromCart}>
+      <figure onClick={inCart ? removeFromCart : () => {}}>
         <img src={image || ImgProd} alt="product" />
       </figure>
       <div>
