@@ -17,6 +17,7 @@ const ShoppingCart = () => {
           {/* RENDERIZAR LISTA */}
           <MyOrder>
             {cart.map((el) => {
+              console.log(el, "el in shopping cart");
               return <ProductItem key={el.id} {...el} inCart={true} />;
             })}
           </MyOrder>

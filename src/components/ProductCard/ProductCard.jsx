@@ -16,6 +16,7 @@ const ProductCard = ({ cart, setCart, productInfo, inCart }) => {
           price: productInfo.price,
           name: productInfo.title,
           id: productInfo.id,
+          ...productInfo,
         },
       ]);
       //setCart with ...cart and elements with id != to the current
@@ -27,7 +28,11 @@ const ProductCard = ({ cart, setCart, productInfo, inCart }) => {
   };
   return (
     <div className="product-card">
-      <img src={productInfo.images[0]} alt="" className="product-card__image" />
+      <img
+        src={productInfo.images[0]}
+        alt={productInfo.descriprtion}
+        className="product-card__image"
+      />
       <div>
         <div>
           <p className="product-card__price">$ {productInfo.price}</p>

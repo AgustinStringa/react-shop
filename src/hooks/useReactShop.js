@@ -6,6 +6,7 @@ const useReactShop = () => {
         text: "",
         price: false,
         recent: false,
+        categories: [],
     });
     let INITIAL_USER = {}
     if (localStorage.getItem("react-shop-user")) {
