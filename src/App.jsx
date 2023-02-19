@@ -12,44 +12,47 @@ import Orders from "Pages/Orders/Orders";
 import { ShopContext } from "./context/ShopContext";
 import useReactShop from "./hooks/useReactShop";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/home",
-    element: <Home />,
-  },
-  {
-    path: "/new-password",
-    element: <NewPassword />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/password-recovery",
-    element: <PasswordRecovery />,
-  },
-  {
-    path: "/account",
-    element: <Account />,
-  },
-  {
-    path: "/order",
-    element: <Order />,
-  },
-  {
-    path: "/my-orders",
-    element: <Orders />,
-  },
-  {
-    path: "*",
-    element: <NotFound />,
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/home",
+      element: <Home />,
+    },
+    {
+      path: "/new-password",
+      element: <NewPassword />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/password-recovery",
+      element: <PasswordRecovery />,
+    },
+    {
+      path: "/account",
+      element: <Account />,
+    },
+    {
+      path: "/order",
+      element: <Order />,
+    },
+    {
+      path: "/my-orders",
+      element: <Orders />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  ],
+  { basename: "/react-shop" }
+);
 
 const App = () => {
   getProducts;
